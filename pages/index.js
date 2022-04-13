@@ -12,6 +12,6 @@ export default function Home() {
       </main>
 
       <div>{/* player */}</div>
-    </div>
+    </div>s
   )
 }
