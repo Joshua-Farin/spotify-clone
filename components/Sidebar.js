@@ -4,6 +4,8 @@ import {
     SearchIcon,
     LibraryIcon,
     PlusCircleIcon,
+    HeartIcon,
+    RssIcon,
 } from "@heroicons/react/outline";
 
 function Sidebar() {
@@ -30,18 +32,18 @@ function Sidebar() {
 
           <button className='flex items-center space-x-2
             hover:text-white'>
-              <HomeIcon className="h-5 w-5"/>
+              <PlusCircleIcon className="h-5 w-5"/>
               <p>Create Playlist</p>
           </button>
           <button className="flex items-center space-x-2
             hover:text-white">
-              <SearchIcon className="h-5 w-5"/>
-              <p>Search</p>
+              <HeartIcon className="h-5 w-5"/>
+              <p>Liked Songs</p>
           </button>
           <button className='flex items-center space-x-2
             hover:text-white'>
-              <LibraryIcon className="h-5 w-5"/>
-              <p>Your Search</p>
+              <RssIcon className="h-5 w-5"/>
+              <p>Your Episodes</p>
           </button>
 
           <hr className="border-t-[0.1px] border-gray-900"/>
