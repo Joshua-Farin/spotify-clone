@@ -15,6 +15,9 @@ function Sidebar() {
   const spotifyApi = useSpotify();
   const { data: session, status} = useSession();
   const [playlists, setPlaylists] = useState([]);
+  const [playlistId, setPlaylistId] = useState(null);
+
+  console.log("you picked playlist ->>>", playlistId);
 
   useEffect(() => {
     if (spotifyApi.getAccessToken()) {
@@ -24,7 +27,7 @@ function Sidebar() {
     }
   }, [session, spotifyApi]);
   
-  console.log(playlists);
+  
   
 
   return (
@@ -74,7 +77,7 @@ function Sidebar() {
             
           {/* 2:17:58 */} 
           {playlists.map((playlist) => (
-            <p key={playlist.id} className="cursor-pointer hover:text-white">{playlist.name}</p>
+            <p key={playlist.id} onClick={() => setPlaylistId(playlist.id)} className="cursor-pointer hover:text-white">{playlist.name}</p>
           ))}
           
       </div>
