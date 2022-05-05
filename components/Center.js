@@ -16,6 +16,7 @@ const colors = [
     "from-pink-500",
     "from-purple-500",
 ];
+// (https://www.youtube.com/watch?v=3xrko3GpYoU 2:51:11)
 
 function Center() {
     const { data: session } = useSession();
