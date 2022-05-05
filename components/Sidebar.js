@@ -27,7 +27,7 @@ function Sidebar() {
         setPlaylists(data.body.items);
       });
     }
-  }, [session, spotifyApi]);
+  }, [session, spotifyApi]); // (2:23:51 https://www.youtube.com/watch?v=3xrko3GpYoU)
   
   
   
