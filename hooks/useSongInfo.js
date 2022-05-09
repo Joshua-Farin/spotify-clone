@@ -1,5 +1,6 @@
 import React from 'react'
-import { useEffect, useState } from 'react/cjs/react.production.min';
+import { useRecoilState } from 'recoil';
+import { useEffect, useState } from 'react';
 import { currentTrackIdState } from '../atoms/songAtom';
 import useSpotify from './useSpotify'
 
