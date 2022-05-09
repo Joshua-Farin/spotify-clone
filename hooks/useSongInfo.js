@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react/cjs/react.production.min';
 import { currentTrackIdState } from '../atoms/songAtom';
 import useSpotify from './useSpotify'
 
@@ -11,14 +11,16 @@ function useSongInfo() {
     useEffect(() => {
         const fetchSongInfo = async () => {
           if (currentIdTrack) {
-            const trackInfo = await fetch(
+            const trackInfo = await fetch(        
               `https://api.spotify.com/v1/tracks/${currentIdTrack}`,
               {
                 headers: {
                   Authorization: `Bearer${spotifyApi.getAccessToken()}`,
-                }
+                } 
               }
-            )
+            ).then(res => res.json());
+
+            setSongInfo(trackInfo);
           }
         }
         fetchSongInfo();
